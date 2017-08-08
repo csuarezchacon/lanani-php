@@ -3,7 +3,7 @@
 		private $host = 'localhost';
 		private $dbName = 'nonodb';
 		private $userName = 'admin';
-		private $password = 'v4JLVdqdv1YN';
+		private $password = 'Ffws1J5hDxXD';
 
 		public function getConnection(){
 			$this->conn = null;
