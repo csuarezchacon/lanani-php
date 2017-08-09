@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular + PHP</title>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fjalla+One" />
+
+	<script type="text/javascript" src="vendor/angular/angular.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="index_module.js"></script>
+	<script type="text/javascript" src="index_controller.js"></script>
+</head>
+<body>
+	<div ng-app="WebLanani" ng-controller="AppCtrl as vmApp">
+		<div class="container-fluid text-center main-menu">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-2 menu-btn" ng-click="vmApp.setNavBar('tienda');">Tienda</div>
+				<div class="col-md-2 menu-btn" ng-click="vmApp.setNavBar('eventos');">Eventos</div>
+				<div class="col-md-2 menu-logo-full" ng-click="vmApp.setNavBar('home');"><img src="img/logo.png" style="width:120px; height:120px;"></div>
+				<div class="col-md-2 menu-btn" ng-click="vmApp.setNavBar('sobre');">Sobre Lanani</div>
+				<div class="col-md-2 menu-btn" ng-click="vmApp.setNavBar('contacto');">Cont&aacute;ctenos</div>
+				<div class="col-md-1 menu-btn"></div>
+			</div>
+		</div>
+
+		<div ng-switch on="vmApp.navBar.selected">
+			<div ng-switch-when="tienda"><h1>Tienda de Lanani</h1></div>
+			<div ng-switch-when="eventos"><h1>Eventos de Lanani</h1></div>
+			<div ng-switch-when="sobre"><h1>Sobre Lanani</h1></div>
+			<div ng-switch-when="contacto"><h1>Contacto de Lanani</h1></div>
+			<div ng-switch-default><h1>Home Lanani</h1></div>
+		</div>
+	</div>
+</body>
+</html>
