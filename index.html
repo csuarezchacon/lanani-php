@@ -3,17 +3,21 @@
 <head>
 	<title>Angular + PHP</title>
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fjalla+One" />
 
+	<script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="vendor/angular/angular.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
 
+	<script type="text/javascript" src="index_jquery.js"></script>
 	<script type="text/javascript" src="index_module.js"></script>
 	<script type="text/javascript" src="index_controller.js"></script>
 </head>
 <body>
 	<div ng-app="WebLanani" ng-controller="AppCtrl as vmApp">
+		<!--
 		<div class="container-fluid text-center main-menu">
 			<div class="row">
 				<div class="col-md-1"></div>
@@ -25,13 +29,86 @@
 				<div class="col-md-1 menu-btn"></div>
 			</div>
 		</div>
+		-->
 
+		<div class="container-fluid text-center">
+			<!-- render desktop menu -->
+			<div id="menu-lg" class="row menu-lg hidden-sm hidden-xs">				
+				<div class="col-md-4 col-lg-5">
+					<div class="row">
+						<div class="col-lg-1"></div>
+						<div class="col-md-2 col-lg-2 menu-btn-l" ng-click="vmApp.setNavBar('tienda');">TIENDA</div>
+						<div class="col-md-2 col-lg-2 menu-btn-l" ng-click="vmApp.setNavBar('eventos');">EVENTOS</div>
+						<div class="col-md-5 col-lg-4 menu-btn-l" ng-click="vmApp.setNavBar('sobre');">SOBRE LANANI</div>
+						<div class="col-md-1 col-lg-2 menu-btn-l" ng-click="vmApp.setNavBar('contacto');">CONTACTENOS</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-2">
+					<img class="menu-logo" src="img/logo.png">
+				</div>
+				<div class="col-md-4 col-lg-5">
+					<div class="row">
+						<div class="col-md-offset-4 col-md-4 col-lg-offset-6 col-lg-2 menu-btn-r">FACEBOOK</div>
+						<div class="col-md-4 col-lg-2 menu-btn-r">INSTAGRAM</div>
+						<div class="col-lg-1"></div>
+					</div>
+				</div>
+			</div>
+			<!-- render desktop menu position fixed -->
+			<div id="menu-lg-fx" class="row menu-lg-fx hidden-sm hidden-xs" hidden="true">				
+				<div class="col-md-4 col-lg-5">
+					<div class="row">
+						<div class="col-lg-2"></div>
+						<div class="col-md-2 col-lg-2 menu-btn-l-fx" ng-click="vmApp.setNavBar('tienda');">TIENDA</div>
+						<div class="col-md-2 col-lg-2 menu-btn-l-fx" ng-click="vmApp.setNavBar('eventos');">EVENTOS</div>
+						<div class="col-md-5 col-lg-4 menu-btn-l-fx" ng-click="vmApp.setNavBar('sobre');">SOBRE LANANI</div>
+						<div class="col-md-2 col-lg-2 menu-btn-l-fx" ng-click="vmApp.setNavBar('contacto');">CONTACTENOS</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-2">
+					<img class="menu-logo-sm" src="img/logo.png">
+				</div>
+				<div class="col-md-4 col-lg-5">
+					<div class="row">
+						<div class="col-md-offset-4 col-md-4 col-lg-offset-6 col-lg-2 menu-btn-r-fx">FACEBOOK</div>
+						<div class="col-md-4 col-lg-2 menu-btn-r-fx">INSTAGRAM</div>
+						<div class="col-lg-1"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- render mobile menu -->
+			<div class="row menu-sm hidden-md hidden-lg">
+				<div class="col-xs-4 col-sm-4">
+					<div class="row text-left">
+						<i class="fa fa-bars btn-circle" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<img class="menu-logo-sm" src="img/logo.png">
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<div class="row text-left">
+						<div class="col-xs-offset-6 col-xs-2 col-sm-offset-7 col-sm-2">
+							<i class="fa fa-facebook btn-circle"></i>
+						</div>
+						<div class="col-xs-2 col-sm-2">
+							<i class="fa fa-instagram btn-circle"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row menu-sm-bk hidden-md hidden-lg">
+				<div>&nbsp;</div>
+			</div>
+		</div>
+		
 		<div ng-switch on="vmApp.navBar.selected">
-			<div ng-switch-when="tienda"><h1>Tienda de Lanani</h1></div>
-			<div ng-switch-when="eventos"><h1>Eventos de Lanani</h1></div>
-			<div ng-switch-when="sobre"><h1>Sobre Lanani</h1></div>
-			<div ng-switch-when="contacto"><h1>Contacto de Lanani</h1></div>
-			<div ng-switch-default><h1>Home Lanani</h1></div>
+			<div class="container" ng-switch-when="tienda"><h1>Tienda de Lanani</h1></div>
+			<div class="container" ng-switch-when="eventos"><h1>Eventos de Lanani</h1></div>
+			<div class="container" ng-switch-when="sobre"><h1>Sobre Lanani</h1></div>
+			<div class="container" ng-switch-when="contacto"><h1>Contacto de Lanani</h1></div>
+			<div class="container" ng-switch-default><h1>Home Lanani</h1></div>
 		</div>
 	</div>
 </body>

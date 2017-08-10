@@ -1,15 +1,68 @@
 *{
   font-family: "Fjalla One";
 }
-.menu-btn{
-  font-weight: bold;
+.menu-btn-l{
   font-size: 18px;
-  margin-top: 55px;
+  font-weight: bold;
+  margin-top: 75px;
 }
-.menu-logo-full{
+.menu-btn-l-fx{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.menu-btn-r{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 75px;
+}
+.menu-btn-r-fx{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.menu-logo{
+  height:170px;
   margin-top: 5px;
+  width:170px;
 }
-.main-menu{
-  background-color: #dddddd;
-  height: 130px;
+.menu-logo-sm{
+  height:60px;
+  margin-top: 5px;
+  width:60px;
+}
+.menu-lg{
+  background-color: #eeeeee;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+  height: 180px;
+}
+.menu-lg-fx{
+  background-color: #cccccc;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+.menu-sm{
+  background-color: #555555;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+.menu-sm-bk{
+  height: 50px;
+}
+.fa {
+  margin-top: 8px;
+  font-size: 25px;
+  margin-left: 8px;
+}
+.btn-circle {
+  color: #ffffff;
+  width: 46px;
+  height: 46px;
+  padding: 7px;
 }
