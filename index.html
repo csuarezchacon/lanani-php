@@ -9,12 +9,20 @@
 	<script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="vendor/angular/angular.min.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav-icon.css">
+    <link rel="stylesheet" href="www/_css/style.css">
+    <link rel="stylesheet" href="www/_css/nav-icon.css">
+    <link rel="stylesheet" href="www/_css/thumbnail.css">
 
 	<script type="text/javascript" src="index_jquery.js"></script>
 	<script type="text/javascript" src="index_module.js"></script>
 	<script type="text/javascript" src="index_controller.js"></script>
+
+	<script type="text/javascript" src="www/constants/util_constant.js"></script>
+
+	<script type="text/javascript" src="www/container/product/product-container_controller.js"></script>
+
+	<script type="text/javascript" src="www/directives/product/product-slight_directive.js"></script>
+	<script type="text/javascript" src="www/directives/product/product-slight_controller.js"></script>
 </head>
 <body>
 	<div ng-app="WebLanani" ng-controller="AppCtrl as vmApp">
@@ -32,7 +40,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 col-lg-2">
-					<img class="menu-logo" src="img/logo.png">
+					<img class="menu-logo" src="www/_img/logo.png">
 				</div>
 				<div class="col-md-4 col-lg-5">
 					<div class="row">
@@ -54,7 +62,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 col-lg-2">
-					<img class="menu-logo-sm" src="img/logo.png">
+					<img class="menu-logo-sm" src="www/_img/logo.png">
 				</div>
 				<div class="col-md-4 col-lg-5">
 					<div class="row">
@@ -78,7 +86,7 @@
 					</div>
 				</div>
 				<div class="col-xs-2 col-sm-2">
-					<img class="menu-logo-sm" src="img/logo.png">
+					<img class="menu-logo-sm" src="www/_img/logo.png">
 				</div>
 				<div class="col-xs-5 col-sm-5">
 					<div class="row pull-right">
@@ -93,7 +101,9 @@
 		</div>
 		
 		<div ng-switch on="vmApp.navBar.selected">
-			<div class="container" ng-switch-when="tienda"><h1>Tienda de Lanani</h1></div>
+			<div class="container" ng-switch-when="tienda">
+				<div ng-include="'www/container/product/product-container.html'"></div>
+			</div>
 			<div class="container" ng-switch-when="eventos"><h1>Eventos de Lanani</h1></div>
 			<div class="container" ng-switch-when="sobre"><h1>Sobre Lanani</h1></div>
 			<div class="container" ng-switch-when="contacto"><h1>Contacto de Lanani</h1></div>

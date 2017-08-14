@@ -1,0 +1,11 @@
+<div ng-controller="productContainerController as vm">
+	<div>
+		<h1>AMIGURUMIS</h1>
+	</div>
+	
+	<div class="container">
+		<div ng-repeat="prod in vm.productList">
+			<product-slight-directive product="prod"></product-slight-directive>
+		</div>
+	</div>
+</div>

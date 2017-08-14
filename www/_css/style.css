@@ -43,6 +43,7 @@
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 99;
 }
 .menu-sm{
   background-color: #eeeeee;
@@ -51,6 +52,7 @@
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 99;
 }
 .menu-sm-bk{
   height: 50px;

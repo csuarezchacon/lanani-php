@@ -1,0 +1,29 @@
+.md-size {
+	width: 240px;
+	height: 240px;
+}
+
+.gallery {
+	border: 1px solid rgba(0,0,0,0.15);
+	border-radius: 5px;
+	padding: 0px 1px 1px 1px;
+	text-align: center;
+}
+.gallery-photo {
+	display: inline-block;
+	margin-top: 18px;
+	z-index: 0;
+}
+.gallery-desc {
+	display: inline-block;
+	height:40px;
+	width: 250px;
+	margin-top: 8px;
+	z-index: 0;
+}
+.gallery-pay {
+	display: inline-block;
+	height:35px;
+	width: 250px;
+	z-index: 0;
+}
