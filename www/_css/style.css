@@ -32,12 +32,12 @@
   width:60px;
 }
 .menu-lg{
-  background-color: #eeeeee;
+  background-color: #36c0d0;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
   height: 180px;
 }
 .menu-lg-fx{
-  background-color: #eeeeee;
+  background-color: #36c0d0;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
   height: 70px;
   position: fixed;
@@ -46,9 +46,9 @@
   z-index: 99;
 }
 .menu-sm{
-  background-color: #eeeeee;
+  background-color: #36c0d0;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
-  height: 50px;
+  height: 80px;
   position: fixed;
   top: 0px;
   width: 100%;
@@ -64,10 +64,14 @@
 }
 .fa-facebook {
   color: #3b5998;
+  font-size: 50px;
+  top: 5px;
 }
 .fa-instagram {
   color: #000000;
   font-weight: bold;
+  font-size: 50px;
+  top: 5px;
 }
 .btn-circle {
   color: #ffffff;

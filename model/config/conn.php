@@ -1,9 +1,9 @@
-<?php 
+<?php
 	class Database {
 		private $host = 'localhost';
 		private $dbName = 'nonodb';
-		private $userName = 'admin';
-		private $password = 'Ffws1J5hDxXD';
+		private $userName = 'root';
+		private $password = '123456';
 
 		public function getConnection(){
 			$this->conn = null;
